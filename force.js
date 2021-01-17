@@ -97,7 +97,7 @@ start = () => {
 start()
 
 const s = http.createServer((req, res) => {
-    res.write(new Date + '<br><br><br>' + start().map(l => `<p>${l.slice(-l.length, 6)}/${l.slice(6, l.length)}</p>`).join(''))
+    res.write('<p>' + new Date + '</p>' + '<br><br><br>' + start().map(l => `<p>${l.slice(-l.length, 6)}/${l.slice(6, l.length)}</p>`).join(''))
     res.end()
 })
 s.listen(9559)
