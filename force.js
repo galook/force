@@ -100,7 +100,7 @@ const s = http.createServer((req, res) => {
     res.write(start().map(l => `<p>${l.slice(-l.length, 6)}/${l.slice(6, l.length)}</p>${l}`).join(''))
     res.end()
 })
-s.listen(8000)
+s.listen(9559)
 const a = Date.now() - d
 
 console.log(a);
