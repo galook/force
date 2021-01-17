@@ -13,7 +13,7 @@ const real = false
 
 let array = []
 
-const max_iterations = 10
+const max_iterations = 7000
 
 sendHttp = async (num) => {
     data = `{"hin":"${num}"}`
