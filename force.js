@@ -47,6 +47,7 @@ sendHttp = async (num) => {
 }
 
 start = () => {
+    array = [];
     for (let i = 0; i < max_iterations; i++) {
         if (real) {
             let a = ('0' + (Math.floor(Math.random() * 2) ? Math.floor(Math.random() * (99 - 55) + 55) : Math.floor(Math.random() * (20)))).slice(-2)
@@ -86,21 +87,21 @@ start = () => {
         if (n) array.push(n)
         
         if (i == max_iterations - 1) {
-            let a = array
-            array = []
-            return a
+          
+            return array
         }
         
     }
 }
 
 start()
+console.log(array)
 
 const s = http.createServer((req, res) => {
     res.write('<p>' + new Date + '</p>' + '<br><br><br>' + start().map(l => `<p>${l.slice(-l.length, 6)}/${l.slice(6, l.length)}</p>`).join(''))
     res.end()
 })
-s.listen(9559)
+s.listen(9778)
 const a = Date.now() - d
 
 console.log(a);
